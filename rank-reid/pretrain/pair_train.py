@@ -225,34 +225,10 @@ def pair_pretrain_on_dataset(source, project_path='/home/cwh/coding/rank-reid', 
     )
 
 if __name__ == '__main__':
-    sources = ['cuhk_grid_viper_mix']
-    sources = ['cuhk', 'viper', 'market','duke']
+
+    sources = ['market']
     for source in sources:
         softmax_pretrain_on_dataset(source,
-                                    project_path='/home/cwh/coding/rank-reid',
-                                    dataset_parent='/home/cwh/coding/')
+                                    project_path='/content/TFusion/rank-reid',
+                                    dataset_parent='/content')
         pair_pretrain_on_dataset(source)
-    sources = ['grid-cv-%d' % i for i in range(10)]
-    for source in sources:
-        softmax_pretrain_on_dataset(source,
-                                    project_path='/home/cwh/coding/rank-reid',
-                                    dataset_parent='/home/cwh/coding')
-        pair_pretrain_on_dataset(source,
-                                 project_path='/home/cwh/coding/rank-reid',
-                                 dataset_parent='/home/cwh/coding')
-
-    # sources = ['viper']
-    # for source in sources:
-    #     # softmax_pretrain_on_dataset(source,
-    #     #                             project_path='/home/cwh/coding/rank-reid',
-    #     #                             dataset_parent='/home/cwh/coding/')
-    #     pair_pretrain_on_dataset(source)
-    # sources = ['grid-cv-%d' % i for i in range(10)]
-    # for source in sources:
-    #     softmax_pretrain_on_dataset(source,
-    #                                 project_path='/home/cwh/coding/rank-reid',
-    #                                 dataset_parent='/home/cwh/coding')
-    #     pair_pretrain_on_dataset(source,
-    #                              project_path='/home/cwh/coding/rank-reid',
-    #                              dataset_parent='/home/cwh/coding')
-

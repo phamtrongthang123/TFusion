@@ -163,4 +163,4 @@ if __name__ == '__main__':
     # sources = ['market', 'grid', 'cuhk', 'viper']
     sources = ['market']
     for source in sources:
-        softmax_pretrain_on_dataset(source)
+        softmax_pretrain_on_dataset(source, project_path = '/content/TFusion/rank-reid', dataset_parent = '/content/Market-1501-v15.09.15')

@@ -255,7 +255,7 @@ if __name__ == '__main__':
 
     rank_transfer_2dataset('../pretrain/cuhk_pair_pretrain.h5', '../dataset/market_train.list',
                           'rank_transfer_test.h5',
-                          '/home/cwh/coding/Market-1501/train',
-                          '/home/cwh/coding/TrackViz/data/cuhk_market-train/cross_filter_pid.log',
-                          '/home/cwh/coding/TrackViz/data/cuhk_market-train/cross_filter_score.log')
+                          '/content/Market-1501/train',
+                          '/content/TFusion/TrackViz/data/cuhk_market-train/cross_filter_pid.log',
+                          '/content/TFusion/TrackViz/data/cuhk_market-train/cross_filter_score.log')
 

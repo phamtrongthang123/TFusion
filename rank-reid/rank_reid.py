@@ -6,10 +6,10 @@ from transfer.simple_rank_transfer import rank_transfer_2dataset
 
 
 def get_source_target_info(source, target):
-    source_model_path = '/home/cwh/coding/rank-reid/pretrain/%s_pair_pretrain.h5' % source
+    source_model_path = '/content/TFusion/rank-reid/pretrain/%s_pair_pretrain.h5' % source
     target_dataset_path = ''
     if target == 'market':
-        target_dataset_path = '/home/cwh/coding/Market-1501'
+        target_dataset_path = '/content/Market-1501'
     elif target == 'markets1':
         target_dataset_path = '/home/cwh/coding/markets1'
     elif target == 'duke':
@@ -52,7 +52,7 @@ def rank_predict(rank_model_path, target, transfer_train_rank_pids_path, transfe
 def predict_eval(target, predict_path):
     if target == 'market' or target == 'market-r':
         market_result_eval(predict_path,
-                           TEST = '/home/cwh/coding/Market-1501/test', QUERY = '/home/cwh/coding/Market-1501/probe')
+                           TEST = '/content/Market-1501/test', QUERY = '/content/Market-1501/probe')
     elif 'grid' in target:
         grid_result_eval(predict_path)
     elif 'duke' in target:
