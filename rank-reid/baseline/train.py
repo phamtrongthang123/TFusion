@@ -55,6 +55,7 @@ def load_mix_data(LIST, TRAIN):
 
 
 def load_data(LIST, TRAIN):
+	print('Load duoc toi day roi')
     images, labels = [], []
     with open(LIST, 'r') as f:
         last_label = -1
@@ -74,6 +75,8 @@ def load_data(LIST, TRAIN):
             images.append(img[0])
             labels.append(label_cnt)
 
+
+    print('Loop xong roi')
     img_cnt = len(labels)
     shuffle_idxes = range(img_cnt)
     shuffle(shuffle_idxes)
