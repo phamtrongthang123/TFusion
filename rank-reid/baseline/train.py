@@ -55,7 +55,7 @@ def load_mix_data(LIST, TRAIN):
 
 
 def load_data(LIST, TRAIN):
-	print('Load duoc toi day roi')
+    print('Load duoc toi day roi')
     images, labels = [], []
     with open(LIST, 'r') as f:
         last_label = -1
