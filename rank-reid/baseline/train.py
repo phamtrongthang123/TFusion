@@ -87,13 +87,13 @@ def load_data(LIST, TRAIN):
     #	print (idx)
     #    shuffle_imgs.append(images[idx])
     #print('Loop 2 xong')
-    #images = np.array(shuffle_imgs)
+    images = np.array(images)
     #shuffle_imgs = list()
     #for idx in shuffle_idxes:
     #	print (idx)
     #    shuffle_labels.append(labels[idx])
     #print('Loop 3 xong')
-    #labels = to_categorical(shuffle_labels)
+    labels = to_categorical(labels)
     print ('Load data ok!')
     return images, labels
 
