@@ -76,24 +76,24 @@ def load_data(LIST, TRAIN):
             labels.append(label_cnt)
 
 
-    print('Loop xong roi')
-    img_cnt = len(labels)
-    shuffle_idxes = range(img_cnt)
-    shuffle(shuffle_idxes)
-    print('Shuffle xong')
-    shuffle_imgs = list()
-    shuffle_labels = list()
-    for idx in shuffle_idxes:
-    	print (idx)
-        shuffle_imgs.append(images[idx])
-    print('Loop 2 xong')
-    images = np.array(shuffle_imgs)
-    shuffle_imgs = list()
-    for idx in shuffle_idxes:
-    	print (idx)
-        shuffle_labels.append(labels[idx])
-    print('Loop 3 xong')
-    labels = to_categorical(shuffle_labels)
+    #print('Loop xong roi')
+    #img_cnt = len(labels)
+    #shuffle_idxes = range(img_cnt)
+    #shuffle(shuffle_idxes)
+    #print('Shuffle xong')
+    #shuffle_imgs = list()
+    #shuffle_labels = list()
+    #for idx in shuffle_idxes:
+    #	print (idx)
+    #    shuffle_imgs.append(images[idx])
+    #print('Loop 2 xong')
+    #images = np.array(shuffle_imgs)
+    #shuffle_imgs = list()
+    #for idx in shuffle_idxes:
+    #	print (idx)
+    #    shuffle_labels.append(labels[idx])
+    #print('Loop 3 xong')
+    #labels = to_categorical(shuffle_labels)
     print ('Load data ok!')
     return images, labels
 
