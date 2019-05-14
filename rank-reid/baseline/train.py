@@ -84,7 +84,7 @@ def load_data(LIST, TRAIN):
         shuffle_labels.append(labels[idx])
     images = np.array(shuffle_imgs)
     labels = to_categorical(shuffle_labels)
-    print 'Load data ok!'
+    
     return images, labels
 
 
