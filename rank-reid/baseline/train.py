@@ -108,7 +108,7 @@ def softmax_model_pretrain(train_list, train_dir, class_count, target_model_path
         layer.trainable = True
 
     # pretrain
-    batch_size = 16
+    batch_size = 8
     train_datagen = ImageDataGenerator(
         shear_range=0.2,
         width_shift_range=0.2,  # 0.
