@@ -84,6 +84,7 @@ def load_data(LIST, TRAIN):
         shuffle_labels.append(labels[idx])
     images = np.array(shuffle_imgs)
     labels = to_categorical(shuffle_labels)
+    print 'Load data ok!'
     return images, labels
 
 
@@ -156,6 +157,7 @@ def softmax_pretrain_on_dataset(source, project_path='/home/cwh/coding/rank-reid
         train_list = 'unknown'
         train_dir = 'unknown'
         class_count = -1
+    print 'Load pretrain ok!'
     softmax_model_pretrain(train_list, train_dir, class_count, '../pretrain/' + source + '_softmax_pretrain.h5')
 
 
