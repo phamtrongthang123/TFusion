@@ -89,6 +89,7 @@ def load_data(LIST, TRAIN):
         shuffle_labels.append(labels[idx])
     print('Loop 2 xong')
     images = np.array(shuffle_imgs)
+    shuffle_imgs = list()
     labels = to_categorical(shuffle_labels)
     print ('Load data ok!')
     return images, labels
@@ -116,7 +117,7 @@ def softmax_model_pretrain(train_list, train_dir, class_count, target_model_path
 
     # pretrain
     print('Toi phan batch_size')
-    batch_size = 8
+    batch_size = 16
     train_datagen = ImageDataGenerator(
         shear_range=0.2,
         width_shift_range=0.2,  # 0.
