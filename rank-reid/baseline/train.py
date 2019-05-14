@@ -84,7 +84,7 @@ def load_data(LIST, TRAIN):
         shuffle_labels.append(labels[idx])
     images = np.array(shuffle_imgs)
     labels = to_categorical(shuffle_labels)
-    
+    print ('Load data ok!')
     return images, labels
 
 
@@ -98,7 +98,7 @@ def softmax_model_pretrain(train_list, train_dir, class_count, target_model_path
 
     # load pre-trained resnet50
     base_model = ResNet50(weights='imagenet', include_top=False, input_tensor=Input(shape=(224, 224, 3)))
-
+    print('Load resnet50 ok')
     x = base_model.output
     x = Flatten(name='flatten')(x)
     x = Dropout(0.5)(x)
@@ -109,12 +109,13 @@ def softmax_model_pretrain(train_list, train_dir, class_count, target_model_path
         layer.trainable = True
 
     # pretrain
+    print('Toi phan batch_size')
     batch_size = 8
     train_datagen = ImageDataGenerator(
         shear_range=0.2,
         width_shift_range=0.2,  # 0.
         height_shift_range=0.2)
-
+    print('Toi phan compile')
     net.compile(optimizer=SGD(lr=0.001, momentum=0.9), loss='categorical_crossentropy', metrics=['accuracy'])
     net.fit_generator(
         train_datagen.flow(images, labels, batch_size=batch_size),
