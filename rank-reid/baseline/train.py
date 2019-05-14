@@ -157,7 +157,7 @@ def softmax_pretrain_on_dataset(source, project_path='/home/cwh/coding/rank-reid
         train_list = 'unknown'
         train_dir = 'unknown'
         class_count = -1
-    print 'Load pretrain ok!'
+    print ('Load pretrain ok!')
     softmax_model_pretrain(train_list, train_dir, class_count, '../pretrain/' + source + '_softmax_pretrain.h5')
 
 
